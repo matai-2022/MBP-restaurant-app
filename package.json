@@ -1,0 +1,25 @@
+{
+  "name": "mbp-restaurant-app",
+  "version": "1.0.0",
+  "description": "3 June 2022 Friday Group Project by Lucas, Docie, Daniel, and Christelle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index --ignore data.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christelleq/MBP-restaurant-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christelleq/MBP-restaurant-app/issues"
+  },
+  "homepage": "https://github.com/christelleq/MBP-restaurant-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
