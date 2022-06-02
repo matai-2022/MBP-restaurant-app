@@ -13,7 +13,7 @@ const filename = path.join(__dirname, 'data.json')
 // Server configuration
 server.use(express.static('public'))
 server.use(express.urlencoded({ extended: false }))
-
+server.use('/restaurants', routes)
 // Handlebars configuration
 server.engine('hbs', hbs.engine({ extname: 'hbs' }))
 server.set('view engine', 'hbs')
