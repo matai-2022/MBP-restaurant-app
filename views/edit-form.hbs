@@ -1,0 +1,25 @@
+{{!-- Routes: locasthost:3000/restaurants/:name/edit-form --}}
+
+<form class="form" action="/restaurants/{{name}}/edit-form">
+<label for="name" class="form-item">
+  Name:
+  <input type ="text" name="name" value="{{name}}">
+</label>
+
+<label for="openingHours" class="form-item">
+  Opening hours:
+  <input type ="text" name="openingHours" value="{{openingHours}}">
+</label>
+
+<label for="pickup" class="form-item">
+  Pickup:
+  <input type ="text" name="pickup" value="{{pickup}}">
+</label>
+
+<label for="delivery" class="form-item">
+  Delivery:
+  <input type ="text" name="delivery" value="{{delivery}}">
+</label>
+<input type="submit" name="" value="Submit">
+
+</form>
