@@ -10,6 +10,12 @@ const filename = path.join(__dirname, 'data.json')
 
 module.exports = router
 
+//new form with router.get
+
+//form input opening hours your're interested in
+
+//return all restaurants that meet criteria - clickable like home page to redirect to specific restaurant
+
 //create GET route to render particular puppy. The route should contain the id as a parameter so you can access it via req.params.id -- so /:id
 router.get('/:id', (req, res) => {
   fsPromises
@@ -30,7 +36,7 @@ router.get('/:id', (req, res) => {
       const pizzaId = pizzaArr.find((item) => item.name === urlID)
 
       //return specific puppy data.
-      return res.render('details', pizzaId)
+      return res.render('branch-details', pizzaId)
     })
     .catch((err) => {
       console.error(err, 'No data found')
