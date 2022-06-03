@@ -1,17 +1,17 @@
 {
   "restaurants": [
     {
-      "name": "Newmarket Branch",
+      "name": "Newmarket",
       "openingHours": "9-5pm",
       "pickup": "Yes",
       "delivery": "Yes",
-      "image": ""
+      "image": "/images/puppaspizza-newmarket.JPEG"
     },
     {
-      "name": "CBD Branch",
+      "name": "CBD",
       "openingHours": "9-12pm",
       "pickup": "Yes",
       "delivery": "No",
-      "image": ""
+      "image": "/images/puppaspizza-cbd.JPEG"
     }
   ]}
