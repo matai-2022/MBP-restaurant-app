@@ -21,5 +21,9 @@
   "homepage": "https://github.com/christelleq/MBP-restaurant-app#readme",
   "devDependencies": {
     "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6"
   }
 }
