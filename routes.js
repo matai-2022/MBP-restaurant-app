@@ -109,7 +109,6 @@ router.post('/:id/edit-form', async (req, res) => {
       (pizza) => pizza.name === urlID
     )
     //reassign data
-    pizzaMatch.name = req.body.name
     pizzaMatch.openingHours = req.body.openingHours
     pizzaMatch.pickup = req.body.pickup
     pizzaMatch.delivery = req.body.delivery
