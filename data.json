@@ -1,14 +1,14 @@
 {
   "restaurants": [
     {
-      "name": "Newmarket Branch",
+      "name": "Newmarket",
       "openingHours": "9-5pm",
       "pickup": "Yes",
       "delivery": "Yes",
       "image": ""
     },
     {
-      "name": "CBD Branch",
+      "name": "CBD",
       "openingHours": "9-12pm",
       "pickup": "Yes",
       "delivery": "No",
