@@ -1,0 +1,10 @@
+.img-branch{
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name-branch{
+  text-align: center;
+}

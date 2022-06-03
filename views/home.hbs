@@ -1,5 +1,8 @@
-<div>
+<div class="img-branch">
+  <img src="/images/puppaspizza.JPEG" alt="Puppa's Pizza">
   {{#each restaurants}}
-  <a href="restaurants/{{name}}"><img class="img-branch" href="{{image}}"></a>
+  <div class="name-branch">
+  <a href="restaurants/{{name}}">{{name}}</a>
+  </div>
   {{/each}}
 </div>
