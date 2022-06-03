@@ -11,7 +11,31 @@ const filename = path.join(__dirname, 'data.json')
 module.exports = router
 
 //new form with router.get
+router.get('/hungry', (req, res) => {
+  fsPromises
 
+    .readFile(filename, 'utf-8')
+    .then((restaurantData) => {
+      //parse puppies to read from JSON file so that data in puppies is not a string.
+
+      const parsedRestaurantData = JSON.parse(restaurantData)
+
+      //turn req.params.id into number from string
+      const urlID = req.params.id
+
+      //select the array of puppies in data object
+      const pizzaArr = parsedRestaurantData.restaurants
+
+      //match specific puppy id with the url id
+      const pizzaId = pizzaArr.find((item) => item.name === urlID)
+
+      //return specific puppy data.
+      return res.render('hungry-form', pizzaId)
+    })
+    .catch((err) => {
+      console.error(err, 'No data found')
+    })
+})
 //form input opening hours your're interested in
 
 //return all restaurants that meet criteria - clickable like home page to redirect to specific restaurant
@@ -43,14 +67,14 @@ router.get('/:id', (req, res) => {
     })
 })
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit-form', (req, res) => {
   fsPromises
 
     .readFile(filename, 'utf-8')
     .then((restaurantData) => {
       //parse puppies to read from JSON file so that data in puppies is not a string.
 
-      const parsedPuppy = JSON.parse(restaurantData)
+      const parsedRestaurantData = JSON.parse(restaurantData)
 
       //turn req.params.id into number from string
       const urlID = req.params.id
@@ -62,7 +86,7 @@ router.get('/:id/edit', (req, res) => {
       const pizzaId = pizzaArr.find((item) => item.name === urlID)
 
       //return specific puppy data.
-      return res.render('edit', pizzaId)
+      return res.render('edit-form', pizzaId)
     })
     .catch((err) => {
       console.error(err, 'No data found')
