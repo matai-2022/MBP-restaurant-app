@@ -20,7 +20,6 @@ router.get('/hungry', (req, res) => {
 
       const parsedRestaurantData = JSON.parse(restaurantData)
 
-      //turn req.params.id into number from string
       const urlID = req.params.id
 
       //select the array of puppies in data object
@@ -30,7 +29,7 @@ router.get('/hungry', (req, res) => {
       const pizzaId = pizzaArr.find((item) => item.name === urlID)
 
       //return specific puppy data.
-      return res.render('hungry-form', pizzaId)
+      return res.render('hungry', pizzaId)
     })
     .catch((err) => {
       console.error(err, 'No data found')
