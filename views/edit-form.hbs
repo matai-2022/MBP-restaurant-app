@@ -3,22 +3,22 @@
   <img src="{{image}}" alt="{{name}}">
   <h2>{{name}}</h2>
 
-<form class="form" action="/restaurants/{{name}}/edit-form" method="post">
-<label for="openingHours" class="form-item">
-  Opening hours:
-  <input type ="text" name="openingHours" value="{{openingHours}}">
-</label>
+  <form class="form" action="/restaurants/{{name}}/edit-form" method="post">
+  <label for="openingHours">
+    Opening hours:
+    <input type ="text" name="openingHours" value="{{openingHours}}">
+  </label>
+    
+  <label for="pickup">
+    Pickup:
+    <input type ="text" name="pickup" value="{{pickup}}">
+  </label>
 
-<label for="pickup" class="form-item">
-  Pickup:
-  <input type ="text" name="pickup" value="{{pickup}}">
-</label>
+  <label for="delivery">
+    Delivery:
+    <input type ="text" name="delivery" value="{{delivery}}">
+  </label>
+  <input type="submit" name="" value="Submit">
 
-<label for="delivery" class="form-item">
-  Delivery:
-  <input type ="text" name="delivery" value="{{delivery}}">
-</label>
-<input type="submit" name="" value="Submit">
-
-</form>
+  </form>
 </div>
