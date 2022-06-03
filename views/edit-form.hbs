@@ -1,11 +1,9 @@
 {{!-- Routes: locasthost:3000/restaurants/:name/edit-form --}}
+<div class="img-branch", "name-branch">
+  <img src="{{image}}" alt="{{name}}">
+  <h2>{{name}}</h2>
 
 <form class="form" action="/restaurants/{{name}}/edit-form" method="post">
-<label for="name" class="form-item">
-  Name:
-  <input type ="text" name="name" value="{{name}}">
-</label>
-
 <label for="openingHours" class="form-item">
   Opening hours:
   <input type ="text" name="openingHours" value="{{openingHours}}">
@@ -23,3 +21,4 @@
 <input type="submit" name="" value="Submit">
 
 </form>
+</div>
