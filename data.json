@@ -3,14 +3,14 @@
     {
       "name": "Newmarket",
       "openingHours": "9-5pm",
-      "pickup": "sometimes",
-      "delivery": "maybe",
+      "pickup": "never",
+      "delivery": "hello",
       "image": "/images/puppaspizza-newmarket.JPEG"
     },
     {
       "name": "CBD",
       "openingHours": "9-12pm",
-      "pickup": "Yes",
+      "pickup": "no",
       "delivery": "No",
       "image": "/images/puppaspizza-cbd.JPEG"
     }

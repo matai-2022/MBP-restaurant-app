@@ -40,7 +40,7 @@ router.get('/hungry', (req, res) => {
 
 //return all restaurants that meet criteria - clickable like home page to redirect to specific restaurant
 
-//create GET route to render particular puppy. The route should contain the id as a parameter so you can access it via req.params.id -- so /:id
+//create GET route to render particular restuarant. The route should contain the id as a parameter so you can access it via req.params.id -- so /:id
 router.get('/:id', (req, res) => {
   fsPromises
 
@@ -72,20 +72,19 @@ router.get('/:id/edit-form', (req, res) => {
 
     .readFile(filename, 'utf-8')
     .then((restaurantData) => {
-      //parse puppies to read from JSON file so that data in puppies is not a string.
+      //parse restaurants to read from JSON file so that data in restaurants is not a string.
 
       const parsedRestaurantData = JSON.parse(restaurantData)
 
-      //turn req.params.id into number from string
       const urlID = req.params.id
 
-      //select the array of puppies in data object
+      //select the array of restaurants in data object
       const pizzaArr = parsedRestaurantData.restaurants
 
-      //match specific puppy id with the url id
+      //match specific restaurant id with the url id
       const pizzaId = pizzaArr.find((item) => item.name === urlID)
 
-      //return specific puppy data.
+      //return specific restaurant data.
       return res.render('edit-form', pizzaId)
     })
     .catch((err) => {
@@ -104,7 +103,7 @@ router.post('/:id/edit-form', async (req, res) => {
     //req.params.id
     const urlID = req.params.id
 
-    //match specific puppy id with the url id
+    //match specific restaurant id with the url id
     const pizzaMatch = parsedRestaurantData.restaurants.find(
       (pizza) => pizza.name === urlID
     )
@@ -118,9 +117,9 @@ router.post('/:id/edit-form', async (req, res) => {
     const stringifyPizza = JSON.stringify(parsedRestaurantData, null, 2)
     await fsPromises.writeFile(filename, stringifyPizza, 'utf-8')
 
-    //redirect to puppies/:id route
+    //redirect to restaurants/:id route
 
-    return res.redirect('/')
+    return res.redirect(`/restaurants/${urlID}`)
   } catch (err) {
     console.error(err, 'No data found')
   }
